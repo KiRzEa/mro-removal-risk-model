@@ -68,7 +68,7 @@ data/       mock_components.csv and SCHEMA.md
 models/     model.joblib (committed so a file can be scored without training)
 reports/    metrics.json, stability*.json, stress_test.json, charts,
             example_predictions.md, test_scores.csv
-docs/       REPORT.md (write-up) and Problem5-Slides.pptx (the slide deck)
+docs/       REPORT.md (write-up) and Problem5-Slides.pptx / .pdf (the slide deck)
 ```
 
 ## Honest limits
