@@ -1,0 +1,1530 @@
+{
+  "caveat": "The model is trained on the committed dataset. Every scenario uses the same generator, so robustness is shown only for the shifts that were modelled.",
+  "scenarios": [
+    {
+      "name": "no_shift_committed_dataset",
+      "settings": {},
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.8823529411764706,
+        "low": 0.7599655172413793,
+        "high": 0.9714285714285714
+      },
+      "alerts_per_100_fixed_cutoff": 3.95,
+      "recall_fixed_cutoff": 0.8823529411764706,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.942217036223949,
+          "ks": 0.29516666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3109233126280906,
+          "ks": 0.1758333333333334
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "current_a_z_change_vs_previous",
+          "psi": 0.01330805327080475,
+          "ks": 0.029991644855711652
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.013028473550621252,
+          "ks": 0.03712331418218168
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7459933194451593,
+          "ks": 0.25333333333333335
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.36750977238871174,
+          "ks": 0.18795698924731186
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.33337173593177,
+          "ks": 0.33904761904761904
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.21386406167380684,
+          "ks": 0.1499999999999999
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.144684355237864,
+          "ks": 0.179047619047619
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7353648528898796,
+          "ks": 0.3155555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.42145056289666627,
+          "ks": 0.1955555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.22059438469976647,
+          "ks": 0.1946339264945336
+        }
+      ]
+    },
+    {
+      "name": "sensor_offset_one_operator",
+      "settings": {
+        "sensor_offset_sd": 1.5,
+        "utilization_factor": 1.0,
+        "extra_missing_rate": 0.0,
+        "life_scale_factor": 1.0,
+        "precursor_factor": 1.0,
+        "early_failure_share": 0.0
+      },
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.8823529411764706,
+        "low": 0.7645276292335116,
+        "high": 0.972972972972973
+      },
+      "alerts_per_100_fixed_cutoff": 4.0,
+      "recall_fixed_cutoff": 0.8823529411764706,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.942217036223949,
+          "ks": 0.29516666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3109233126280906,
+          "ks": 0.1758333333333334
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.1377921808624756,
+          "ks": 0.1525971597405512
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "oil_temp_c_z_vs_own_prior_mean",
+          "psi": 0.040811574162784275,
+          "ks": 0.0668248479478396
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7459933194451593,
+          "ks": 0.25333333333333335
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.36750977238871174,
+          "ks": 0.18795698924731186
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.33337173593177,
+          "ks": 0.33904761904761904
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.21386406167380684,
+          "ks": 0.1499999999999999
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.144684355237864,
+          "ks": 0.179047619047619
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 2.595047868451844,
+          "ks": 0.5934606885322167
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7353648528898796,
+          "ks": 0.3155555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_mean",
+          "psi": 0.5128532904130897,
+          "ks": 0.18807135380320994
+        }
+      ]
+    },
+    {
+      "name": "higher_usage",
+      "settings": {
+        "sensor_offset_sd": 0.0,
+        "utilization_factor": 1.3,
+        "extra_missing_rate": 0.0,
+        "life_scale_factor": 1.0,
+        "precursor_factor": 1.0,
+        "early_failure_share": 0.0
+      },
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.8823529411764706,
+        "low": 0.7645276292335116,
+        "high": 0.972972972972973
+      },
+      "alerts_per_100_fixed_cutoff": 4.0,
+      "recall_fixed_cutoff": 0.8823529411764706,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 6.715535404423008,
+          "ks": 0.7293333333333334
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3109233126280906,
+          "ks": 0.1758333333333334
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "current_a_z_change_vs_previous",
+          "psi": 0.01330805327080475,
+          "ks": 0.029991644855711652
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.013028473550621252,
+          "ks": 0.03712331418218168
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 6.885115362164518,
+          "ks": 0.6675268817204301
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.36750977238871174,
+          "ks": 0.18795698924731186
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 6.4663508297773635,
+          "ks": 0.709047619047619
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.21386406167380684,
+          "ks": 0.1499999999999999
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.144684355237864,
+          "ks": 0.179047619047619
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 7.159809546284323,
+          "ks": 0.8488888888888889
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.42145056289666627,
+          "ks": 0.1955555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.22059438469976647,
+          "ks": 0.1946339264945336
+        }
+      ]
+    },
+    {
+      "name": "more_missing_data",
+      "settings": {
+        "sensor_offset_sd": 0.0,
+        "utilization_factor": 1.0,
+        "extra_missing_rate": 0.2,
+        "life_scale_factor": 1.0,
+        "precursor_factor": 1.0,
+        "early_failure_share": 0.0
+      },
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.7647058823529411,
+        "low": 0.6175904977375566,
+        "high": 0.9
+      },
+      "alerts_per_100_fixed_cutoff": 4.8500000000000005,
+      "recall_fixed_cutoff": 0.7647058823529411,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.942217036223949,
+          "ks": 0.29516666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3109233126280906,
+          "ks": 0.1758333333333334
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "current_a_z_change_vs_previous",
+          "psi": 0.017706309247292353,
+          "ks": 0.03875983603805361
+        },
+        {
+          "feature": "pressure_kpa_z_vs_type",
+          "psi": 0.0160500833471265,
+          "ks": 0.038723920276110824
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7459933194451593,
+          "ks": 0.25333333333333335
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.36750977238871174,
+          "ks": 0.18795698924731186
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.33337173593177,
+          "ks": 0.33904761904761904
+        },
+        {
+          "group": "OP_B",
+          "feature": "vibration_mm_s_is_missing",
+          "psi": 0.24411776234119104,
+          "ks": 0.18904761904761913
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.21386406167380684,
+          "ks": 0.1499999999999999
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7353648528898796,
+          "ks": 0.3155555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.42145056289666627,
+          "ks": 0.1955555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.19196833981660322,
+          "ks": 0.18149780249471753
+        }
+      ]
+    },
+    {
+      "name": "low_base_rate",
+      "settings": {
+        "sensor_offset_sd": 0.0,
+        "utilization_factor": 1.0,
+        "extra_missing_rate": 0.0,
+        "life_scale_factor": 2.0,
+        "precursor_factor": 1.0,
+        "early_failure_share": 0.0
+      },
+      "test_rows": 2000,
+      "test_positives": 17,
+      "test_positive_rate": 0.0085,
+      "recall_at_budget": {
+        "estimate": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "alerts_per_100_fixed_cutoff": 3.3000000000000003,
+      "recall_fixed_cutoff": 1.0,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9523015570644728,
+          "ks": 0.29516666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4155895918329554,
+          "ks": 0.18333333333333346
+        },
+        {
+          "feature": "pressure_kpa_spread_z_vs_type",
+          "psi": 0.12338914507448459,
+          "ks": 0.1193530207394049
+        },
+        {
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.12014278263415436,
+          "ks": 0.11698635035306815
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.11272446649195042,
+          "ks": 0.15766666666666668
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7965414415948616,
+          "ks": 0.2589247311827957
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4395092772462872,
+          "ks": 0.19053763440860216
+        },
+        {
+          "group": "OP_A",
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.09861923671518365,
+          "ks": 0.10387382970188042
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.2220142075218345,
+          "ks": 0.32809523809523805
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3118064732418864,
+          "ks": 0.15999999999999992
+        },
+        {
+          "group": "OP_B",
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.14114923665193943,
+          "ks": 0.1258713794796269
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7362402038992267,
+          "ks": 0.3174603174603175
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.5871197055658041,
+          "ks": 0.20698412698412705
+        },
+        {
+          "group": "OP_C",
+          "feature": "pressure_kpa_spread_z_vs_type",
+          "psi": 0.19492536809764394,
+          "ks": 0.16872509179855522
+        }
+      ]
+    },
+    {
+      "name": "high_base_rate",
+      "settings": {
+        "sensor_offset_sd": 0.0,
+        "utilization_factor": 1.0,
+        "extra_missing_rate": 0.0,
+        "life_scale_factor": 0.5,
+        "precursor_factor": 1.0,
+        "early_failure_share": 0.0
+      },
+      "test_rows": 2000,
+      "test_positives": 78,
+      "test_positive_rate": 0.039,
+      "recall_at_budget": {
+        "estimate": 0.6282051282051282,
+        "low": 0.5245851659336266,
+        "high": 0.7333544303797468
+      },
+      "alerts_per_100_fixed_cutoff": 8.35,
+      "recall_fixed_cutoff": 0.8589743589743589,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.0086976453719012,
+          "ks": 0.30166666666666664
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.2346152366569164,
+          "ks": 0.16733333333333344
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1600340949255008,
+          "ks": 0.18666666666666665
+        },
+        {
+          "feature": "current_a_spread_z_vs_type",
+          "psi": 0.12557469821117456,
+          "ks": 0.15363977939741058
+        },
+        {
+          "feature": "pressure_kpa_spread_z_vs_type",
+          "psi": 0.12382775306820873,
+          "ks": 0.15277242296468319
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.8047935177781559,
+          "ks": 0.26365591397849464
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.29717818925516687,
+          "ks": 0.18150537634408603
+        },
+        {
+          "group": "OP_A",
+          "feature": "pressure_kpa_spread_z_vs_type",
+          "psi": 0.19725226494059495,
+          "ks": 0.18984538825075903
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.3715740309034492,
+          "ks": 0.34476190476190477
+        },
+        {
+          "group": "OP_B",
+          "feature": "vibration_mm_s_spread_z_vs_type",
+          "psi": 0.2130846254676234,
+          "ks": 0.208379390813068
+        },
+        {
+          "group": "OP_B",
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.18953912316335705,
+          "ks": 0.19721110330517744
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7701495732337715,
+          "ks": 0.3206349206349206
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3235689024620944,
+          "ks": 0.18984126984126992
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.29833818891453157,
+          "ks": 0.22842182995707067
+        }
+      ]
+    },
+    {
+      "name": "faster_degradation",
+      "settings": {
+        "sensor_offset_sd": 0.0,
+        "utilization_factor": 1.0,
+        "extra_missing_rate": 0.0,
+        "life_scale_factor": 1.0,
+        "precursor_factor": 0.5,
+        "early_failure_share": 0.0
+      },
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.9117647058823529,
+        "low": 0.7998863636363637,
+        "high": 1.0
+      },
+      "alerts_per_100_fixed_cutoff": 3.1,
+      "recall_fixed_cutoff": 0.9117647058823529,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9654281166342861,
+          "ks": 0.29500000000000004
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.35115105004141034,
+          "ks": 0.17233333333333345
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "vibration_mm_s_spread_z_vs_type",
+          "psi": 0.11392912870167331,
+          "ks": 0.11259673973332374
+        },
+        {
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.11232527902519908,
+          "ks": 0.11430764967244611
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7447530201834732,
+          "ks": 0.2524731182795699
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.39095671327681114,
+          "ks": 0.18150537634408603
+        },
+        {
+          "group": "OP_A",
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.11782409958440539,
+          "ks": 0.10998293045537144
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.244401696519302,
+          "ks": 0.3333333333333333
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.255315498494858,
+          "ks": 0.14714285714285713
+        },
+        {
+          "group": "OP_B",
+          "feature": "oil_temp_c_spread_z_vs_type",
+          "psi": 0.15336619752399816,
+          "ks": 0.12904598265423006
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7767989334662533,
+          "ks": 0.32317460317460317
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4794707951814524,
+          "ks": 0.1955555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.17830445900442388,
+          "ks": 0.17209604770665476
+        }
+      ]
+    },
+    {
+      "name": "early_failures_of_new_components",
+      "settings": {
+        "sensor_offset_sd": 0.0,
+        "utilization_factor": 1.0,
+        "extra_missing_rate": 0.0,
+        "life_scale_factor": 1.0,
+        "precursor_factor": 1.0,
+        "early_failure_share": 0.3
+      },
+      "test_rows": 2000,
+      "test_positives": 42,
+      "test_positive_rate": 0.021,
+      "recall_at_budget": {
+        "estimate": 0.9047619047619048,
+        "low": 0.8,
+        "high": 0.98
+      },
+      "alerts_per_100_fixed_cutoff": 4.6,
+      "recall_fixed_cutoff": 0.9047619047619048,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9151795649013295,
+          "ks": 0.29350000000000004
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.34382699019978313,
+          "ks": 0.18433333333333346
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1310213485643143,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.014418924353665884,
+          "ks": 0.041350697225021715
+        },
+        {
+          "feature": "current_a_z_change_vs_previous",
+          "psi": 0.013106991487795337,
+          "ks": 0.029145797936273588
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7003123386879264,
+          "ks": 0.25075268817204305
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4237164595409608,
+          "ks": 0.2021505376344086
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.2761009659202505,
+          "ks": 0.33904761904761904
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.24804668235743546,
+          "ks": 0.15999999999999992
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.144684355237864,
+          "ks": 0.179047619047619
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7302844817679697,
+          "ks": 0.3149206349206349
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4113943976515351,
+          "ks": 0.19365079365079374
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.209426877553666,
+          "ks": 0.18988879775410217
+        }
+      ]
+    },
+    {
+      "name": "fresh_seed_101",
+      "settings": {
+        "seed": 101
+      },
+      "test_rows": 2000,
+      "test_positives": 43,
+      "test_positive_rate": 0.0215,
+      "recall_at_budget": {
+        "estimate": 0.7906976744186046,
+        "low": 0.6732993197278911,
+        "high": 0.9047619047619048
+      },
+      "alerts_per_100_fixed_cutoff": 5.1,
+      "recall_fixed_cutoff": 0.7441860465116279,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.1194347358722627,
+          "ks": 0.3461666666666667
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.25677886329478683,
+          "ks": 0.16183333333333338
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.14767370505912122,
+          "ks": 0.17966666666666664
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.03205306076434128,
+          "ks": 0.07583643621521147
+        },
+        {
+          "feature": "oil_temp_c_z_vs_own_prior_mean",
+          "psi": 0.015734054513094498,
+          "ks": 0.049648347309984464
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.918943187160348,
+          "ks": 0.31553763440860205
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.29832135547035743,
+          "ks": 0.17946236559139794
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.23912709863210801,
+          "ks": 0.2248924731182796
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.6418207265362135,
+          "ks": 0.3494505494505495
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.2197647714425856,
+          "ks": 0.15021978021978022
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.14761663540772735,
+          "ks": 0.16805860805860806
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.8239224527128691,
+          "ks": 0.35041269841269845
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.30480217557600037,
+          "ks": 0.15447619047619043
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.2186900552592268,
+          "ks": 0.1896366162854335
+        }
+      ],
+      "note": "Same settings, new random seed: a generalization check, not drift."
+    },
+    {
+      "name": "fresh_seed_102",
+      "settings": {
+        "seed": 102
+      },
+      "test_rows": 2000,
+      "test_positives": 40,
+      "test_positive_rate": 0.02,
+      "recall_at_budget": {
+        "estimate": 0.9,
+        "low": 0.8,
+        "high": 0.9782724329324699
+      },
+      "alerts_per_100_fixed_cutoff": 5.0,
+      "recall_fixed_cutoff": 0.875,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.336323938595492,
+          "ks": 0.2375
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.23881557514167404,
+          "ks": 0.15233333333333343
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.0905765954923684,
+          "ks": 0.14416666666666667
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.02835854893698278,
+          "ks": 0.07079110381898795
+        },
+        {
+          "feature": "pressure_kpa_mean",
+          "psi": 0.015123247285304347,
+          "ks": 0.030838790207945332
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.843071587050788,
+          "ks": 0.1879421579532815
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.2482870403409357,
+          "ks": 0.1621060437523173
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.10754169759788085,
+          "ks": 0.1524212087504635
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 2.0499928488326624,
+          "ks": 0.2857142857142857
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.17305714369235914,
+          "ks": 0.12857142857142856
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.14281918069013544,
+          "ks": 0.1490476190476191
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.0632461913505855,
+          "ks": 0.33540372670807456
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.35693447463361705,
+          "ks": 0.1672877846790891
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.3009718813886855,
+          "ks": 0.2324316035559783
+        }
+      ],
+      "note": "Same settings, new random seed: a generalization check, not drift."
+    },
+    {
+      "name": "fresh_seed_103",
+      "settings": {
+        "seed": 103
+      },
+      "test_rows": 2000,
+      "test_positives": 38,
+      "test_positive_rate": 0.019,
+      "recall_at_budget": {
+        "estimate": 0.9210526315789473,
+        "low": 0.8275862068965517,
+        "high": 1.0
+      },
+      "alerts_per_100_fixed_cutoff": 4.9,
+      "recall_fixed_cutoff": 0.9210526315789473,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9699325582999787,
+          "ks": 0.292
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.32273959753086157,
+          "ks": 0.1768333333333334
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1274654342914958,
+          "ks": 0.1711666666666667
+        },
+        {
+          "feature": "vibration_mm_s_z_vs_type",
+          "psi": 0.020652263771539763,
+          "ks": 0.04915919863160639
+        },
+        {
+          "feature": "pressure_kpa_std",
+          "psi": 0.01729644261048343,
+          "ks": 0.04028225836173205
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9049649351921865,
+          "ks": 0.33802541544477027
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4483678203642204,
+          "ks": 0.20461388074291298
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13618634143151728,
+          "ks": 0.14443792766373414
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.606035953702643,
+          "ks": 0.3248952380952381
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.23697172190629845,
+          "ks": 0.14394285714285715
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1528642649562892,
+          "ks": 0.16350476190476187
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7803785926700696,
+          "ks": 0.2068109668109669
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.30470952768565507,
+          "ks": 0.17653679653679655
+        },
+        {
+          "group": "OP_C",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.25303471055474386,
+          "ks": 0.2164213564213564
+        }
+      ],
+      "note": "Same settings, new random seed: a generalization check, not drift."
+    },
+    {
+      "name": "fresh_seed_104",
+      "settings": {
+        "seed": 104
+      },
+      "test_rows": 2000,
+      "test_positives": 42,
+      "test_positive_rate": 0.021,
+      "recall_at_budget": {
+        "estimate": 0.8809523809523809,
+        "low": 0.7726948051948052,
+        "high": 0.9761904761904762
+      },
+      "alerts_per_100_fixed_cutoff": 4.65,
+      "recall_fixed_cutoff": 0.8809523809523809,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.086526376362361,
+          "ks": 0.29166666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.24935957063158382,
+          "ks": 0.15933333333333344
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1426406653769229,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.03573038535043386,
+          "ks": 0.07602749631038341
+        },
+        {
+          "feature": "oil_temp_c_z_slope_last_3",
+          "psi": 0.017756766565576235,
+          "ks": 0.039514865187393555
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7850626411470563,
+          "ks": 0.31935483870967735
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.26128000120428607,
+          "ks": 0.17279569892473123
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09935115721926197,
+          "ks": 0.15055913978494623
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.7660313519925745,
+          "ks": 0.3976190476190477
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.2882634629289602,
+          "ks": 0.15603174603174597
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1661678517051045,
+          "ks": 0.16486772486772489
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9817106544756736,
+          "ks": 0.23682539682539683
+        },
+        {
+          "group": "OP_C",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.22837166135381465,
+          "ks": 0.2036940836940837
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.22277107602824292,
+          "ks": 0.1480519480519481
+        }
+      ],
+      "note": "Same settings, new random seed: a generalization check, not drift."
+    },
+    {
+      "name": "fresh_seed_105",
+      "settings": {
+        "seed": 105
+      },
+      "test_rows": 2000,
+      "test_positives": 40,
+      "test_positive_rate": 0.02,
+      "recall_at_budget": {
+        "estimate": 0.775,
+        "low": 0.6326262083780881,
+        "high": 0.9024390243902439
+      },
+      "alerts_per_100_fixed_cutoff": 4.75,
+      "recall_fixed_cutoff": 0.775,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.245904192160258,
+          "ks": 0.34733333333333327
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.29269565043424406,
+          "ks": 0.16283333333333339
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.14907258691437647,
+          "ks": 0.18366666666666664
+        },
+        {
+          "feature": "current_a_z_change_vs_previous",
+          "psi": 0.01960793929943691,
+          "ks": 0.027718776483753815
+        },
+        {
+          "feature": "vibration_mm_s_spread_z_vs_type",
+          "psi": 0.018768331396498885,
+          "ks": 0.045111280348231975
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.9086849940826459,
+          "ks": 0.276760752688172
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.2503064900421359,
+          "ks": 0.15279569892473122
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.1169709489896127,
+          "ks": 0.16155913978494624
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.8573385612752047,
+          "ks": 0.44510476190476184
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.27397746016258506,
+          "ks": 0.15674285714285718
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.17611080963384837,
+          "ks": 0.20190476190476186
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.4512899826996408,
+          "ks": 0.398592132505176
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.4672236924290581,
+          "ks": 0.1864182194616978
+        },
+        {
+          "group": "OP_C",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.22182289243808323,
+          "ks": 0.19373360938578327
+        }
+      ],
+      "note": "Same settings, new random seed: a generalization check, not drift."
+    },
+    {
+      "name": "one_unseen_component_type",
+      "settings": {
+        "renamed": "brake_assembly"
+      },
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.6470588235294118,
+        "low": 0.48148148148148145,
+        "high": 0.8
+      },
+      "alerts_per_100_fixed_cutoff": 3.0,
+      "recall_fixed_cutoff": 0.6470588235294118,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.942217036223949,
+          "ks": 0.29516666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3109233126280906,
+          "ks": 0.1758333333333334
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "current_a_z_change_vs_previous",
+          "psi": 0.018402553186571406,
+          "ks": 0.032593094388418675
+        },
+        {
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.017662809982090574,
+          "ks": 0.05185095917802596
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7459933194451593,
+          "ks": 0.25333333333333335
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.36750977238871174,
+          "ks": 0.18795698924731186
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.33337173593177,
+          "ks": 0.33904761904761904
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.21386406167380684,
+          "ks": 0.1499999999999999
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.144684355237864,
+          "ks": 0.179047619047619
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7353648528898796,
+          "ks": 0.3155555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.42145056289666627,
+          "ks": 0.1955555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "oil_temp_c_z_vs_type",
+          "psi": 0.2745475228926584,
+          "ks": 0.21295741730818185
+        }
+      ],
+      "note": "brake_assembly is unknown to the model, the other types are not."
+    },
+    {
+      "name": "all_component_types_unseen",
+      "settings": {
+        "renamed": "all"
+      },
+      "test_rows": 2000,
+      "test_positives": 34,
+      "test_positive_rate": 0.017,
+      "recall_at_budget": {
+        "estimate": 0.17647058823529413,
+        "low": 0.058823529411764705,
+        "high": 0.3142857142857143
+      },
+      "alerts_per_100_fixed_cutoff": 0.05,
+      "recall_fixed_cutoff": 0.0,
+      "psi_pooled_top": [
+        {
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.942217036223949,
+          "ks": 0.29516666666666663
+        },
+        {
+          "feature": "cycles_since_last_fault",
+          "psi": 0.3109233126280906,
+          "ks": 0.1758333333333334
+        },
+        {
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.13040708000434434,
+          "ks": 0.1691666666666667
+        },
+        {
+          "feature": "fault_count_prior_3",
+          "psi": 0.010019158793453728,
+          "ks": 0.04397421916505889
+        },
+        {
+          "feature": "oil_temp_c_mean",
+          "psi": 0.009112224650897253,
+          "ks": 0.023644489086930565
+        }
+      ],
+      "psi_by_operator_top": [
+        {
+          "group": "OP_A",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7459933194451593,
+          "ks": 0.25333333333333335
+        },
+        {
+          "group": "OP_A",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.36750977238871174,
+          "ks": 0.18795698924731186
+        },
+        {
+          "group": "OP_A",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.09931442310430233,
+          "ks": 0.13978494623655918
+        },
+        {
+          "group": "OP_B",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 1.33337173593177,
+          "ks": 0.33904761904761904
+        },
+        {
+          "group": "OP_B",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.21386406167380684,
+          "ks": 0.1499999999999999
+        },
+        {
+          "group": "OP_B",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.144684355237864,
+          "ks": 0.179047619047619
+        },
+        {
+          "group": "OP_C",
+          "feature": "flight_hours_last_30_cycles",
+          "psi": 0.7353648528898796,
+          "ks": 0.3155555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "cycles_since_last_fault",
+          "psi": 0.42145056289666627,
+          "ks": 0.1955555555555556
+        },
+        {
+          "group": "OP_C",
+          "feature": "prior_unscheduled_removals_in_slot",
+          "psi": 0.17228681086784264,
+          "ks": 0.19936507936507936
+        }
+      ],
+      "note": "No type baselines exist at all: the harshest cold start."
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "settings": {
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "difficulty": "easy",
+    "tuning": true,
+    "quick_mode_fewer_than_required_seeds": false,
+    "uncertainty_note": "Two sources: sampling noise inside one dataset (the component bootstrap in metrics.json) and randomness of the simulation across seeds (this file)."
+  },
+  "per_seed": [
+    {
+      "seed": 1,
+      "test_positives": 38,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8947368421052632,
+        "gradient_boosting": 0.9736842105263158
+      },
+      "chosen_recall": 0.9736842105263158,
+      "reference_recall": {
+        "random": 0.02631578947368421,
+        "cycles_since_new": 0.15789473684210525,
+        "latest_vibration_deviation": 0.5789473684210527,
+        "sum_of_spread_deviations": 0.8947368421052632
+      },
+      "best_reference_recall": 0.8947368421052632
+    },
+    {
+      "seed": 2,
+      "test_positives": 26,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7692307692307693,
+        "gradient_boosting": 0.8461538461538461
+      },
+      "chosen_recall": 0.8461538461538461,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.23076923076923078,
+        "latest_vibration_deviation": 0.6153846153846154,
+        "sum_of_spread_deviations": 0.7692307692307693
+      },
+      "best_reference_recall": 0.7692307692307693
+    },
+    {
+      "seed": 3,
+      "test_positives": 50,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.88,
+        "gradient_boosting": 0.98
+      },
+      "chosen_recall": 0.98,
+      "reference_recall": {
+        "random": 0.04,
+        "cycles_since_new": 0.2,
+        "latest_vibration_deviation": 0.48,
+        "sum_of_spread_deviations": 0.8
+      },
+      "best_reference_recall": 0.8
+    },
+    {
+      "seed": 4,
+      "test_positives": 33,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.9696969696969697,
+        "gradient_boosting": 0.9696969696969697
+      },
+      "chosen_recall": 0.9696969696969697,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.15151515151515152,
+        "latest_vibration_deviation": 0.6060606060606061,
+        "sum_of_spread_deviations": 0.8787878787878788
+      },
+      "best_reference_recall": 0.8787878787878788
+    },
+    {
+      "seed": 5,
+      "test_positives": 40,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.95,
+        "gradient_boosting": 0.975
+      },
+      "chosen_recall": 0.975,
+      "reference_recall": {
+        "random": 0.05,
+        "cycles_since_new": 0.15,
+        "latest_vibration_deviation": 0.475,
+        "sum_of_spread_deviations": 0.8
+      },
+      "best_reference_recall": 0.8
+    },
+    {
+      "seed": 6,
+      "test_positives": 34,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.9117647058823529,
+        "gradient_boosting": 0.9705882352941176
+      },
+      "chosen_recall": 0.9705882352941176,
+      "reference_recall": {
+        "random": 0.11764705882352941,
+        "cycles_since_new": 0.23529411764705882,
+        "latest_vibration_deviation": 0.6764705882352942,
+        "sum_of_spread_deviations": 0.8823529411764706
+      },
+      "best_reference_recall": 0.8823529411764706
+    },
+    {
+      "seed": 7,
+      "test_positives": 44,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8636363636363636,
+        "gradient_boosting": 0.9318181818181818
+      },
+      "chosen_recall": 0.9318181818181818,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.1590909090909091,
+        "latest_vibration_deviation": 0.6363636363636364,
+        "sum_of_spread_deviations": 0.7954545454545454
+      },
+      "best_reference_recall": 0.7954545454545454
+    },
+    {
+      "seed": 8,
+      "test_positives": 42,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8571428571428571,
+        "gradient_boosting": 0.9523809523809523
+      },
+      "chosen_recall": 0.9523809523809523,
+      "reference_recall": {
+        "random": 0.09523809523809523,
+        "cycles_since_new": 0.19047619047619047,
+        "latest_vibration_deviation": 0.47619047619047616,
+        "sum_of_spread_deviations": 0.7857142857142857
+      },
+      "best_reference_recall": 0.7857142857142857
+    },
+    {
+      "seed": 9,
+      "test_positives": 37,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8918918918918919,
+        "gradient_boosting": 0.9459459459459459
+      },
+      "chosen_recall": 0.9459459459459459,
+      "reference_recall": {
+        "random": 0.10810810810810811,
+        "cycles_since_new": 0.13513513513513514,
+        "latest_vibration_deviation": 0.6486486486486487,
+        "sum_of_spread_deviations": 0.8918918918918919
+      },
+      "best_reference_recall": 0.8918918918918919
+    },
+    {
+      "seed": 10,
+      "test_positives": 40,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.925,
+        "gradient_boosting": 0.95
+      },
+      "chosen_recall": 0.95,
+      "reference_recall": {
+        "random": 0.075,
+        "cycles_since_new": 0.2,
+        "latest_vibration_deviation": 0.55,
+        "sum_of_spread_deviations": 0.775
+      },
+      "best_reference_recall": 0.775
+    },
+    {
+      "seed": 11,
+      "test_positives": 32,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.84375,
+        "gradient_boosting": 0.84375
+      },
+      "chosen_recall": 0.84375,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.15625,
+        "latest_vibration_deviation": 0.46875,
+        "sum_of_spread_deviations": 0.84375
+      },
+      "best_reference_recall": 0.84375
+    },
+    {
+      "seed": 12,
+      "test_positives": 45,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8888888888888888,
+        "gradient_boosting": 0.9777777777777777
+      },
+      "chosen_recall": 0.9777777777777777,
+      "reference_recall": {
+        "random": 0.06666666666666667,
+        "cycles_since_new": 0.2,
+        "latest_vibration_deviation": 0.5777777777777777,
+        "sum_of_spread_deviations": 0.7555555555555555
+      },
+      "best_reference_recall": 0.7555555555555555
+    },
+    {
+      "seed": 13,
+      "test_positives": 40,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.9,
+        "gradient_boosting": 0.95
+      },
+      "chosen_recall": 0.95,
+      "reference_recall": {
+        "random": 0.075,
+        "cycles_since_new": 0.275,
+        "latest_vibration_deviation": 0.65,
+        "sum_of_spread_deviations": 0.825
+      },
+      "best_reference_recall": 0.825
+    },
+    {
+      "seed": 14,
+      "test_positives": 49,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8367346938775511,
+        "gradient_boosting": 0.9183673469387755
+      },
+      "chosen_recall": 0.9183673469387755,
+      "reference_recall": {
+        "random": 0.02040816326530612,
+        "cycles_since_new": 0.20408163265306123,
+        "latest_vibration_deviation": 0.6326530612244898,
+        "sum_of_spread_deviations": 0.7551020408163265
+      },
+      "best_reference_recall": 0.7551020408163265
+    },
+    {
+      "seed": 15,
+      "test_positives": 37,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8648648648648649,
+        "gradient_boosting": 0.8918918918918919
+      },
+      "chosen_recall": 0.8918918918918919,
+      "reference_recall": {
+        "random": 0.02702702702702703,
+        "cycles_since_new": 0.16216216216216217,
+        "latest_vibration_deviation": 0.5405405405405406,
+        "sum_of_spread_deviations": 0.8108108108108109
+      },
+      "best_reference_recall": 0.8108108108108109
+    },
+    {
+      "seed": 16,
+      "test_positives": 38,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "chosen_recall": 1.0,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.23684210526315788,
+        "latest_vibration_deviation": 0.631578947368421,
+        "sum_of_spread_deviations": 0.8947368421052632
+      },
+      "best_reference_recall": 0.8947368421052632
+    },
+    {
+      "seed": 17,
+      "test_positives": 34,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.9117647058823529,
+        "gradient_boosting": 0.9117647058823529
+      },
+      "chosen_recall": 0.9117647058823529,
+      "reference_recall": {
+        "random": 0.029411764705882353,
+        "cycles_since_new": 0.23529411764705882,
+        "latest_vibration_deviation": 0.6176470588235294,
+        "sum_of_spread_deviations": 0.8823529411764706
+      },
+      "best_reference_recall": 0.8823529411764706
+    },
+    {
+      "seed": 18,
+      "test_positives": 40,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.75,
+        "gradient_boosting": 0.975
+      },
+      "chosen_recall": 0.975,
+      "reference_recall": {
+        "random": 0.075,
+        "cycles_since_new": 0.1,
+        "latest_vibration_deviation": 0.625,
+        "sum_of_spread_deviations": 0.875
+      },
+      "best_reference_recall": 0.875
+    },
+    {
+      "seed": 19,
+      "test_positives": 35,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.9428571428571428,
+        "gradient_boosting": 0.9428571428571428
+      },
+      "chosen_recall": 0.9428571428571428,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.17142857142857143,
+        "latest_vibration_deviation": 0.6285714285714286,
+        "sum_of_spread_deviations": 0.8571428571428571
+      },
+      "best_reference_recall": 0.8571428571428571
+    },
+    {
+      "seed": 20,
+      "test_positives": 32,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.90625,
+        "gradient_boosting": 0.90625
+      },
+      "chosen_recall": 0.90625,
+      "reference_recall": {
+        "random": 0.03125,
+        "cycles_since_new": 0.125,
+        "latest_vibration_deviation": 0.59375,
+        "sum_of_spread_deviations": 0.84375
+      },
+      "best_reference_recall": 0.84375
+    }
+  ],
+  "summary": {
+    "logistic_regression": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.8879105347978633,
+      "mean_interval_95": [
+        0.8597088711952016,
+        0.916112198400525
+      ],
+      "std": 0.06025811004065156,
+      "median": 0.8933143669985775,
+      "p2_5": 0.7591346153846154,
+      "p97_5": 0.9856060606060606,
+      "min": 0.75,
+      "max": 1.0,
+      "share_at_or_above_target": 0.9,
+      "runs_at_or_above_target": 18,
+      "share_interval_95": [
+        0.6989617935882066,
+        0.9721341060158468
+      ]
+    },
+    "gradient_boosting": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.9406463603582136,
+      "mean_interval_95": [
+        0.9204806674489606,
+        0.9608120532674665
+      ],
+      "std": 0.04308776104460259,
+      "median": 0.95,
+      "p2_5": 0.844891826923077,
+      "p97_5": 0.9904999999999999,
+      "min": 0.84375,
+      "max": 1.0,
+      "share_at_or_above_target": 1.0,
+      "runs_at_or_above_target": 20,
+      "share_interval_95": [
+        0.8388698745050667,
+        1.0
+      ]
+    },
+    "chosen_model": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.9406463603582136,
+      "mean_interval_95": [
+        0.9204806674489606,
+        0.9608120532674665
+      ],
+      "std": 0.04308776104460259,
+      "median": 0.95,
+      "p2_5": 0.844891826923077,
+      "p97_5": 0.9904999999999999,
+      "min": 0.84375,
+      "max": 1.0,
+      "share_at_or_above_target": 1.0,
+      "runs_at_or_above_target": 20,
+      "share_interval_95": [
+        0.8388698745050667,
+        1.0
+      ]
+    },
+    "best_reference_ranking": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.8308185100984196,
+      "mean_interval_95": [
+        0.807685817278441,
+        0.8539512029183981
+      ],
+      "std": 0.049427309293601125,
+      "median": 0.834375,
+      "p2_5": 0.7553174603174603,
+      "p97_5": 0.8947368421052632,
+      "min": 0.7551020408163265,
+      "max": 0.8947368421052632,
+      "share_at_or_above_target": 0.7,
+      "runs_at_or_above_target": 14,
+      "share_interval_95": [
+        0.4810232237710206,
+        0.854524726031006
+      ]
+    },
+    "reference_rankings": {
+      "random": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.041853633665414954,
+        "mean_interval_95": [
+          0.023675281311353012,
+          0.060031986019476895
+        ],
+        "std": 0.038841437581200566,
+        "median": 0.030330882352941176,
+        "p2_5": 0.0,
+        "p97_5": 0.11311605723370428,
+        "min": 0.0,
+        "max": 0.11764705882352941,
+        "share_at_or_above_target": 0.0,
+        "runs_at_or_above_target": 0,
+        "share_interval_95": [
+          -1.3877787807814457e-17,
+          0.16113012549493322
+        ]
+      },
+      "cycles_since_new": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.18381170303148964,
+        "mean_interval_95": [
+          0.16299791945692385,
+          0.20462548660605542
+        ],
+        "std": 0.044472527531323275,
+        "median": 0.18095238095238095,
+        "p2_5": 0.111875,
+        "p97_5": 0.25687499999999996,
+        "min": 0.1,
+        "max": 0.275,
+        "share_at_or_above_target": 0.0,
+        "runs_at_or_above_target": 0,
+        "share_interval_95": [
+          -1.3877787807814457e-17,
+          0.16113012549493322
+        ]
+      },
+      "latest_vibration_deviation": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.5854667376805258,
+        "mean_interval_95": [
+          0.5548157058692078,
+          0.6161177694918438
+        ],
+        "std": 0.06549164169065506,
+        "median": 0.6107226107226107,
+        "p2_5": 0.47171874999999996,
+        "p97_5": 0.6638970588235295,
+        "min": 0.46875,
+        "max": 0.6764705882352942,
+        "share_at_or_above_target": 0.0,
+        "runs_at_or_above_target": 0,
+        "share_interval_95": [
+          -1.3877787807814457e-17,
+          0.16113012549493322
+        ]
+      },
+      "sum_of_spread_deviations": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.8308185100984196,
+        "mean_interval_95": [
+          0.807685817278441,
+          0.8539512029183981
+        ],
+        "std": 0.049427309293601125,
+        "median": 0.834375,
+        "p2_5": 0.7553174603174603,
+        "p97_5": 0.8947368421052632,
+        "min": 0.7551020408163265,
+        "max": 0.8947368421052632,
+        "share_at_or_above_target": 0.7,
+        "runs_at_or_above_target": 14,
+        "share_interval_95": [
+          0.4810232237710206,
+          0.854524726031006
+        ]
+      }
+    },
+    "mean_gain_over_best_reference": 0.1098278502597941,
+    "p_values": {
+      "chosen_beats_best_simple_rule_wilcoxon_one_sided": 6.581352259461349e-05,
+      "boosting_beats_logistic_wilcoxon_one_sided": 0.0004907698762608342
+    }
+  }
+}

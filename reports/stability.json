@@ -1,0 +1,652 @@
+{
+  "settings": {
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "difficulty": "realistic",
+    "tuning": true,
+    "quick_mode_fewer_than_required_seeds": false,
+    "uncertainty_note": "Two sources: sampling noise inside one dataset (the component bootstrap in metrics.json) and randomness of the simulation across seeds (this file)."
+  },
+  "per_seed": [
+    {
+      "seed": 1,
+      "test_positives": 51,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.6666666666666666,
+        "gradient_boosting": 0.7843137254901961
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.5684365230101026,
+        "gradient_boosting": 0.7079908636878124
+      },
+      "chosen_recall": 0.7843137254901961,
+      "reference_recall": {
+        "random": 0.0392156862745098,
+        "cycles_since_new": 0.19607843137254902,
+        "latest_vibration_deviation": 0.43137254901960786,
+        "sum_of_spread_deviations": 0.6470588235294118
+      },
+      "best_reference_recall": 0.6470588235294118
+    },
+    {
+      "seed": 2,
+      "test_positives": 36,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7222222222222222,
+        "gradient_boosting": 0.8055555555555556
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3595832327551509,
+        "gradient_boosting": 0.6648938068154536
+      },
+      "chosen_recall": 0.8055555555555556,
+      "reference_recall": {
+        "random": 0.027777777777777776,
+        "cycles_since_new": 0.08333333333333333,
+        "latest_vibration_deviation": 0.5,
+        "sum_of_spread_deviations": 0.7222222222222222
+      },
+      "best_reference_recall": 0.7222222222222222
+    },
+    {
+      "seed": 3,
+      "test_positives": 30,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7,
+        "gradient_boosting": 0.8666666666666667
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3370325346039055,
+        "gradient_boosting": 0.6465524989825611
+      },
+      "chosen_recall": 0.8666666666666667,
+      "reference_recall": {
+        "random": 0.03333333333333333,
+        "cycles_since_new": 0.3,
+        "latest_vibration_deviation": 0.5,
+        "sum_of_spread_deviations": 0.7333333333333333
+      },
+      "best_reference_recall": 0.7333333333333333
+    },
+    {
+      "seed": 4,
+      "test_positives": 31,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.9354838709677419,
+        "gradient_boosting": 0.9354838709677419
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3695746725773138,
+        "gradient_boosting": 0.7299582238383215
+      },
+      "chosen_recall": 0.9354838709677419,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.22580645161290322,
+        "latest_vibration_deviation": 0.4838709677419355,
+        "sum_of_spread_deviations": 0.8387096774193549
+      },
+      "best_reference_recall": 0.8387096774193549
+    },
+    {
+      "seed": 5,
+      "test_positives": 32,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.84375,
+        "gradient_boosting": 0.9375
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.5400608242012371,
+        "gradient_boosting": 0.801143732684343
+      },
+      "chosen_recall": 0.9375,
+      "reference_recall": {
+        "random": 0.0625,
+        "cycles_since_new": 0.1875,
+        "latest_vibration_deviation": 0.5625,
+        "sum_of_spread_deviations": 0.84375
+      },
+      "best_reference_recall": 0.84375
+    },
+    {
+      "seed": 6,
+      "test_positives": 41,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7317073170731707,
+        "gradient_boosting": 0.926829268292683
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3667376629030547,
+        "gradient_boosting": 0.7498977857811056
+      },
+      "chosen_recall": 0.926829268292683,
+      "reference_recall": {
+        "random": 0.07317073170731707,
+        "cycles_since_new": 0.21951219512195122,
+        "latest_vibration_deviation": 0.5121951219512195,
+        "sum_of_spread_deviations": 0.7560975609756098
+      },
+      "best_reference_recall": 0.7560975609756098
+    },
+    {
+      "seed": 7,
+      "test_positives": 36,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.6111111111111112,
+        "gradient_boosting": 0.6111111111111112
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.4092835777381561,
+        "gradient_boosting": 0.5857053589698663
+      },
+      "chosen_recall": 0.6111111111111112,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.25,
+        "latest_vibration_deviation": 0.3611111111111111,
+        "sum_of_spread_deviations": 0.6388888888888888
+      },
+      "best_reference_recall": 0.6388888888888888
+    },
+    {
+      "seed": 8,
+      "test_positives": 44,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.6590909090909091,
+        "gradient_boosting": 0.8863636363636364
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3930588380271474,
+        "gradient_boosting": 0.7678783495509529
+      },
+      "chosen_recall": 0.8863636363636364,
+      "reference_recall": {
+        "random": 0.06818181818181818,
+        "cycles_since_new": 0.11363636363636363,
+        "latest_vibration_deviation": 0.45454545454545453,
+        "sum_of_spread_deviations": 0.8181818181818182
+      },
+      "best_reference_recall": 0.8181818181818182
+    },
+    {
+      "seed": 9,
+      "test_positives": 43,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7209302325581395,
+        "gradient_boosting": 0.8372093023255814
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.40422930441988525,
+        "gradient_boosting": 0.6545842379114875
+      },
+      "chosen_recall": 0.8372093023255814,
+      "reference_recall": {
+        "random": 0.09302325581395349,
+        "cycles_since_new": 0.13953488372093023,
+        "latest_vibration_deviation": 0.4418604651162791,
+        "sum_of_spread_deviations": 0.6744186046511628
+      },
+      "best_reference_recall": 0.6744186046511628
+    },
+    {
+      "seed": 10,
+      "test_positives": 35,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7142857142857143,
+        "gradient_boosting": 0.8
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.46050211925175544,
+        "gradient_boosting": 0.584634584599025
+      },
+      "chosen_recall": 0.8,
+      "reference_recall": {
+        "random": 0.02857142857142857,
+        "cycles_since_new": 0.3142857142857143,
+        "latest_vibration_deviation": 0.5142857142857142,
+        "sum_of_spread_deviations": 0.7428571428571429
+      },
+      "best_reference_recall": 0.7428571428571429
+    },
+    {
+      "seed": 11,
+      "test_positives": 47,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.723404255319149,
+        "gradient_boosting": 0.7872340425531915
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.5659477767379735,
+        "gradient_boosting": 0.7055747275220692
+      },
+      "chosen_recall": 0.7872340425531915,
+      "reference_recall": {
+        "random": 0.10638297872340426,
+        "cycles_since_new": 0.19148936170212766,
+        "latest_vibration_deviation": 0.3617021276595745,
+        "sum_of_spread_deviations": 0.7446808510638298
+      },
+      "best_reference_recall": 0.7446808510638298
+    },
+    {
+      "seed": 12,
+      "test_positives": 41,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.5853658536585366,
+        "gradient_boosting": 0.7560975609756098
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3217374298751021,
+        "gradient_boosting": 0.6178712213697364
+      },
+      "chosen_recall": 0.7560975609756098,
+      "reference_recall": {
+        "random": 0.07317073170731707,
+        "cycles_since_new": 0.1951219512195122,
+        "latest_vibration_deviation": 0.43902439024390244,
+        "sum_of_spread_deviations": 0.7073170731707317
+      },
+      "best_reference_recall": 0.7073170731707317
+    },
+    {
+      "seed": 13,
+      "test_positives": 44,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7954545454545454,
+        "gradient_boosting": 0.8181818181818182
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.552524921515131,
+        "gradient_boosting": 0.7168856831243648
+      },
+      "chosen_recall": 0.8181818181818182,
+      "reference_recall": {
+        "random": 0.11363636363636363,
+        "cycles_since_new": 0.20454545454545456,
+        "latest_vibration_deviation": 0.4090909090909091,
+        "sum_of_spread_deviations": 0.7272727272727273
+      },
+      "best_reference_recall": 0.7272727272727273
+    },
+    {
+      "seed": 14,
+      "test_positives": 41,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7317073170731707,
+        "gradient_boosting": 0.8048780487804879
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.4353295741643959,
+        "gradient_boosting": 0.6358565019003255
+      },
+      "chosen_recall": 0.8048780487804879,
+      "reference_recall": {
+        "random": 0.04878048780487805,
+        "cycles_since_new": 0.17073170731707318,
+        "latest_vibration_deviation": 0.36585365853658536,
+        "sum_of_spread_deviations": 0.7317073170731707
+      },
+      "best_reference_recall": 0.7317073170731707
+    },
+    {
+      "seed": 15,
+      "test_positives": 38,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.631578947368421,
+        "gradient_boosting": 0.868421052631579
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.3167484244319527,
+        "gradient_boosting": 0.6198041404153282
+      },
+      "chosen_recall": 0.868421052631579,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.13157894736842105,
+        "latest_vibration_deviation": 0.42105263157894735,
+        "sum_of_spread_deviations": 0.7105263157894737
+      },
+      "best_reference_recall": 0.7105263157894737
+    },
+    {
+      "seed": 16,
+      "test_positives": 48,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.75,
+        "gradient_boosting": 0.8541666666666666
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.39056339070666773,
+        "gradient_boosting": 0.804213167017067
+      },
+      "chosen_recall": 0.8541666666666666,
+      "reference_recall": {
+        "random": 0.0625,
+        "cycles_since_new": 0.22916666666666666,
+        "latest_vibration_deviation": 0.5208333333333334,
+        "sum_of_spread_deviations": 0.7291666666666666
+      },
+      "best_reference_recall": 0.7291666666666666
+    },
+    {
+      "seed": 17,
+      "test_positives": 34,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8529411764705882,
+        "gradient_boosting": 0.9411764705882353
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.45992517973925306,
+        "gradient_boosting": 0.7053233995440181
+      },
+      "chosen_recall": 0.9411764705882353,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.3235294117647059,
+        "latest_vibration_deviation": 0.4117647058823529,
+        "sum_of_spread_deviations": 0.7647058823529411
+      },
+      "best_reference_recall": 0.7647058823529411
+    },
+    {
+      "seed": 18,
+      "test_positives": 38,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.7631578947368421,
+        "gradient_boosting": 0.8947368421052632
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.4038569607678059,
+        "gradient_boosting": 0.7088423512940907
+      },
+      "chosen_recall": 0.8947368421052632,
+      "reference_recall": {
+        "random": 0.02631578947368421,
+        "cycles_since_new": 0.07894736842105263,
+        "latest_vibration_deviation": 0.2894736842105263,
+        "sum_of_spread_deviations": 0.6052631578947368
+      },
+      "best_reference_recall": 0.6052631578947368
+    },
+    {
+      "seed": 19,
+      "test_positives": 32,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8125,
+        "gradient_boosting": 0.84375
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.43311988849414645,
+        "gradient_boosting": 0.749024680134705
+      },
+      "chosen_recall": 0.84375,
+      "reference_recall": {
+        "random": 0.0,
+        "cycles_since_new": 0.15625,
+        "latest_vibration_deviation": 0.375,
+        "sum_of_spread_deviations": 0.6875
+      },
+      "best_reference_recall": 0.6875
+    },
+    {
+      "seed": 20,
+      "test_positives": 29,
+      "chosen_model": "gradient_boosting",
+      "recall_by_model": {
+        "logistic_regression": 0.8620689655172413,
+        "gradient_boosting": 0.896551724137931
+      },
+      "pr_auc_by_model": {
+        "logistic_regression": 0.45002560052645896,
+        "gradient_boosting": 0.7822221622790413
+      },
+      "chosen_recall": 0.896551724137931,
+      "reference_recall": {
+        "random": 0.10344827586206896,
+        "cycles_since_new": 0.1724137931034483,
+        "latest_vibration_deviation": 0.5862068965517241,
+        "sum_of_spread_deviations": 0.896551724137931
+      },
+      "best_reference_recall": 0.896551724137931
+    }
+  ],
+  "summary": {
+    "logistic_regression": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.7406713499787085,
+      "mean_interval_95": [
+        0.698652756883597,
+        0.7826899430738201
+      ],
+      "std": 0.08978055486909714,
+      "median": 0.7275557861961599,
+      "p2_5": 0.5975948509485095,
+      "p97_5": 0.900611790878754,
+      "min": 0.5853658536585366,
+      "max": 0.9354838709677419,
+      "share_at_or_above_target": 0.25,
+      "runs_at_or_above_target": 5,
+      "share_interval_95": [
+        0.11186005278940309,
+        0.4687050099580636
+      ]
+    },
+    "gradient_boosting": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.8428113681696978,
+      "mean_interval_95": [
+        0.8062208391038129,
+        0.8794018972355827
+      ],
+      "std": 0.07818248447902383,
+      "median": 0.8489583333333333,
+      "p2_5": 0.679979674796748,
+      "p97_5": 0.9394301470588236,
+      "min": 0.6111111111111112,
+      "max": 0.9411764705882353,
+      "share_at_or_above_target": 0.8,
+      "runs_at_or_above_target": 16,
+      "share_interval_95": [
+        0.5839782779742401,
+        0.9193436467288
+      ]
+    },
+    "pr_auc": {
+      "logistic_regression": {
+        "mean": 0.4269139218223298,
+        "std": 0.07858785289610065,
+        "mean_interval_95": [
+          0.39013367449734526,
+          0.4636941691473143
+        ],
+        "min": 0.3167484244319527,
+        "max": 0.5684365230101026
+      },
+      "gradient_boosting": {
+        "mean": 0.6969428738710837,
+        "std": 0.06819622459230919,
+        "mean_interval_95": [
+          0.6650260582984345,
+          0.7288596894437328
+        ],
+        "min": 0.584634584599025,
+        "max": 0.804213167017067
+      }
+    },
+    "chosen_model": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.8428113681696978,
+      "mean_interval_95": [
+        0.8062208391038129,
+        0.8794018972355827
+      ],
+      "std": 0.07818248447902383,
+      "median": 0.8489583333333333,
+      "p2_5": 0.679979674796748,
+      "p97_5": 0.9394301470588236,
+      "min": 0.6111111111111112,
+      "max": 0.9411764705882353,
+      "share_at_or_above_target": 0.8,
+      "runs_at_or_above_target": 16,
+      "share_interval_95": [
+        0.5839782779742401,
+        0.9193436467288
+      ]
+    },
+    "best_reference_ranking": {
+      "runs_requested": 20,
+      "runs_used": 20,
+      "mean": 0.7360104893740576,
+      "mean_interval_95": [
+        0.702325095016605,
+        0.7696958837315101
+      ],
+      "std": 0.0719751227641245,
+      "median": 0.7304369918699187,
+      "p2_5": 0.621235380116959,
+      "p97_5": 0.8714709051724138,
+      "min": 0.6052631578947368,
+      "max": 0.896551724137931,
+      "share_at_or_above_target": 0.2,
+      "runs_at_or_above_target": 4,
+      "share_interval_95": [
+        0.0806563532712,
+        0.41602172202575993
+      ]
+    },
+    "reference_rankings": {
+      "random": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.04800043294339272,
+        "mean_interval_95": [
+          0.030039554729737763,
+          0.06596131115704768
+        ],
+        "std": 0.03837676355103437,
+        "median": 0.04399808703969393,
+        "p2_5": 0.0,
+        "p97_5": 0.11019100580270792,
+        "min": 0.0,
+        "max": 0.11363636363636363,
+        "share_at_or_above_target": 0.0,
+        "runs_at_or_above_target": 0,
+        "share_interval_95": [
+          -1.3877787807814457e-17,
+          0.16113012549493322
+        ]
+      },
+      "cycles_since_new": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.19417310175961036,
+        "mean_interval_95": [
+          0.161976408822849,
+          0.22636979469637172
+        ],
+        "std": 0.068794234739589,
+        "median": 0.19330565646081993,
+        "p2_5": 0.08103070175438597,
+        "p97_5": 0.31913865546218484,
+        "min": 0.07894736842105263,
+        "max": 0.3235294117647059,
+        "share_at_or_above_target": 0.0,
+        "runs_at_or_above_target": 0,
+        "share_interval_95": [
+          -1.3877787807814457e-17,
+          0.16113012549493322
+        ]
+      },
+      "latest_vibration_deviation": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.4470871860429589,
+        "mean_interval_95": [
+          0.41165444241106997,
+          0.4825199296748478
+        ],
+        "std": 0.07570866013064005,
+        "median": 0.4404424276800908,
+        "p2_5": 0.3235014619883041,
+        "p97_5": 0.5749461206896551,
+        "min": 0.2894736842105263,
+        "max": 0.5862068965517241,
+        "share_at_or_above_target": 0.0,
+        "runs_at_or_above_target": 0,
+        "share_interval_95": [
+          -1.3877787807814457e-17,
+          0.16113012549493322
+        ]
+      },
+      "sum_of_spread_deviations": {
+        "runs_requested": 20,
+        "runs_used": 20,
+        "mean": 0.7360104893740576,
+        "mean_interval_95": [
+          0.702325095016605,
+          0.7696958837315101
+        ],
+        "std": 0.0719751227641245,
+        "median": 0.7304369918699187,
+        "p2_5": 0.621235380116959,
+        "p97_5": 0.8714709051724138,
+        "min": 0.6052631578947368,
+        "max": 0.896551724137931,
+        "share_at_or_above_target": 0.2,
+        "runs_at_or_above_target": 4,
+        "share_interval_95": [
+          0.0806563532712,
+          0.41602172202575993
+        ]
+      }
+    },
+    "mean_gain_over_best_reference": 0.10680087879564007,
+    "p_values": {
+      "chosen_beats_best_simple_rule_wilcoxon_one_sided": 7.75478863978851e-05,
+      "boosting_beats_logistic_wilcoxon_one_sided": 9.821836310615567e-05,
+      "boosting_beats_logistic_pr_auc_wilcoxon_one_sided": 9.5367431640625e-07
+    }
+  }
+}

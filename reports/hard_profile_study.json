@@ -1,0 +1,52 @@
+{
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "settings": "untuned, hard profile, test window",
+  "ablations": {
+    "hard as defined": {
+      "mean_recall": 0.6750745485883939,
+      "min": 0.5333333333333333,
+      "max": 0.78125
+    },
+    "no sudden failures": {
+      "mean_recall": 0.9950980392156863,
+      "min": 0.9607843137254902,
+      "max": 1.0
+    },
+    "sudden failures at the realistic level (15%)": {
+      "mean_recall": 0.8480225586108412,
+      "min": 0.6857142857142857,
+      "max": 0.9354838709677419
+    },
+    "missing values at the realistic level (6%)": {
+      "mean_recall": 0.6936702419424123,
+      "min": 0.5777777777777777,
+      "max": 0.78125
+    },
+    "no label noise": {
+      "mean_recall": 0.6719303384744562,
+      "min": 0.4782608695652174,
+      "max": 0.8043478260869565
+    },
+    "degradation signal at the realistic level (3.0)": {
+      "mean_recall": 0.6735564607330967,
+      "min": 0.4888888888888889,
+      "max": 0.7555555555555555
+    }
+  },
+  "recall_by_alerts_per_100": {
+    "5": 0.6750745485883939,
+    "8": 0.734671960396056,
+    "10": 0.7586895495053431,
+    "15": 0.7898229947312595,
+    "20": 0.8527365873464317
+  }
+}
