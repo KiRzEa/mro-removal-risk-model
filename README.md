@@ -32,7 +32,7 @@ uv run python -m src.stability             # reports/stability.json and .png (20
 uv run python -m src.stability --difficulty easy   # reports/stability_easy.json; also --difficulty hard
 uv run python -m src.hard_profile_study    # reports/hard_profile_study.json (why the hard profile misses 0.80)
 uv run python -m src.explain               # reports/example_predictions.md
-uv run pytest                              # 80 offline tests
+uv run pytest                              # 81 offline tests
 ```
 
 `--seeds 5` is a quick check but overwrites `reports/stability.json`. Training takes about 20 seconds, evaluation about 10 seconds, the 20-seed study about 2 minutes on a laptop.
@@ -45,7 +45,10 @@ Build a CSV that follows `data/SCHEMA.md` (the generator with another seed works
 uv run python -m src.score --input your_file.csv --output scores.csv
 ```
 
-The label column is optional. The output has one row per input row, in the input order:
+The label column is optional. When it is present the command also grades the file and prints recall at the alert
+budget, precision, alerts per 100, PR-AUC and whether the 80% recall / 5 alerts per 100 target is met; add
+`--metrics-output grade.json` to save that summary. Every row of the file is graded, so use a file the model has not
+seen (for example `generate_mock_data` with another seed). The output has one row per input row, in the input order:
 `component_id, snapshot_date, risk_score, rank_in_period, alert, confidence, reason_1, reason_2, reason_3`.
 
 - `alert` is 1 for the top 5% of rows in each distinct `snapshot_date`, rounded up, so a date with fewer than 20 rows still gets one alert. Score the whole fleet and its full history together.

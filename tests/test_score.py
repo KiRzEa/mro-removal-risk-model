@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 import pytest
 
@@ -215,3 +217,22 @@ def test_end_to_end_on_a_file_from_another_seed(model_file, tmp_path):
     assert len(output) == len(fresh)
     assert output.risk_score.between(0, 1).all()
     assert set(output.confidence) <= {"low", "normal"}
+
+
+def test_a_labelled_file_is_graded_and_an_unlabelled_one_is_not(
+    model_file, small_file_frame, tmp_path, capsys
+):
+    labelled = write_input(small_file_frame, tmp_path)
+    metrics_path = tmp_path / "metrics.json"
+    assert (
+        run(model_file, labelled, tmp_path / "out.csv", "--metrics-output", str(metrics_path)) == 0
+    )
+    assert "grading on" in capsys.readouterr().out
+    grade = json.loads(metrics_path.read_text())
+    assert grade["removals"] == int(small_file_frame[LABEL_COLUMN].sum())
+    assert 0 <= grade["recall_at_alert_budget"] <= 1
+    assert grade["alerts_per_100"] <= 5.5
+
+    unlabelled = write_input(small_file_frame.drop(columns=[LABEL_COLUMN]), tmp_path, "plain.csv")
+    assert run(model_file, unlabelled, tmp_path / "out2.csv") == 0
+    assert "grading on" not in capsys.readouterr().out
