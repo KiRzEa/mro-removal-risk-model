@@ -28,7 +28,6 @@ def summarize_runs(values, target: float = TARGET_RECALL, minimum_runs: int = 1)
         raise ValueError(f"The study needs at least {minimum_runs} runs, got {requested}")
     valid = np.array([value for value in values if not np.isnan(value)], dtype=float)
     reaching = int((valid >= target).sum())
-    share_low, share_high = wilson_interval(reaching, len(valid))
     mean_error = (
         stats.t.ppf(0.975, len(valid) - 1) * valid.std(ddof=1) / np.sqrt(len(valid))
         if len(valid) > 1
@@ -47,7 +46,6 @@ def summarize_runs(values, target: float = TARGET_RECALL, minimum_runs: int = 1)
         "max": float(valid.max()),
         "share_at_or_above_target": float((valid >= target).mean()),
         "runs_at_or_above_target": reaching,
-        "share_interval_95": [share_low, share_high],
     }
 
 
@@ -61,17 +59,6 @@ def summarize_values(values) -> dict:
         "min": float(valid.min()),
         "max": float(valid.max()),
     }
-
-
-def wilson_interval(successes: int, total: int, z: float = 1.96) -> tuple[float, float]:
-    if total == 0:
-        return float("nan"), float("nan")
-    share = successes / total
-    centre = (share + z**2 / (2 * total)) / (1 + z**2 / total)
-    half_width = (
-        z * np.sqrt(share * (1 - share) / total + z**2 / (4 * total**2)) / (1 + z**2 / total)
-    )
-    return float(centre - half_width), float(centre + half_width)
 
 
 def paired_p_value(better, worse) -> float:

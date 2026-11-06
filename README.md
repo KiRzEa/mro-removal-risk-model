@@ -30,7 +30,6 @@ uv run python -m src.evaluate              # reports/metrics.json and charts
 uv run python -m src.stress_test           # reports/stress_test.json
 uv run python -m src.stability             # reports/stability.json and .png (20 seeds, realistic profile; per-seed recall and PR-AUC)
 uv run python -m src.stability --difficulty easy   # reports/stability_easy.json; also --difficulty hard
-uv run python -m src.hard_profile_study    # reports/hard_profile_study.json (why the hard profile misses 0.80)
 uv run python -m src.explain               # reports/example_predictions.md
 uv run pytest                              # 81 offline tests
 ```
@@ -67,7 +66,7 @@ src/        schema, generator, features, split, models, evaluation, evaluate, tr
 tests/      generator, features (no look-ahead), split, evaluation, stability, explain, drift, scoring contract
 data/       mock_components.csv and SCHEMA.md
 models/     model.joblib (committed so a file can be scored without training)
-reports/    metrics.json, stability*.json, stress_test.json, hard_profile_study.json, charts,
+reports/    metrics.json, stability*.json, stress_test.json, charts,
             example_predictions.md, test_scores.csv
 docs/       REPORT.md (write-up) and Problem5-Slides.pptx (the slide deck)
 ```

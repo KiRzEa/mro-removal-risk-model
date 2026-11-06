@@ -53,7 +53,7 @@ def evaluate_scores(
         "positives": int(labels.sum()),
         "alerts_per_100": float(100 * alerts.mean()),
     }
-    for name in ("recall", "precision", "lift"):
+    for name in ("recall", "precision"):
         result[f"{name}_at_budget"] = interval_dict(bootstrap[name])
     metrics = (
         ranking_and_probability_metrics(labels, scores)
@@ -198,9 +198,6 @@ def build_report(
         models[name] = {}
         for part_name, part in parts.items():
             models[name][part_name] = evaluate_scores(part, scored[part_name]["raw"][name])
-    for part_name, part in parts.items():
-        calibrated = evaluate_scores(part, scored[part_name]["calibrated"])
-        models[chosen][part_name]["brier_calibrated"] = calibrated["brier"]
 
     test = split.test
     test_labels = test[LABEL_COLUMN].to_numpy()

@@ -2,7 +2,7 @@ import math
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import average_precision_score, brier_score_loss, roc_auc_score
+from sklearn.metrics import average_precision_score, roc_auc_score
 
 from src.config import BOOTSTRAP_RESAMPLES, DEFAULT_SEED, TARGET_RECALL
 
@@ -48,15 +48,10 @@ def precision_at_budget(labels, scores, periods, budget_share: float) -> float:
     return float(labels[alerts == 1].mean()) if alerts.sum() else float("nan")
 
 
-def lift_at_budget(labels, scores, periods, budget_share: float) -> float:
-    base_rate = float(np.asarray(labels).mean())
-    return precision_at_budget(labels, scores, periods, budget_share) / base_rate
-
-
 def cluster_bootstrap_interval(
     labels, alerts, component_ids, resamples: int = BOOTSTRAP_RESAMPLES, seed: int = DEFAULT_SEED
 ) -> dict[str, tuple[float, float, float]]:
-    """Recall, precision and lift with a 95% interval, resampling components (not rows)."""
+    """Recall and precision with a 95% interval, resampling components (not rows)."""
     frame = pd.DataFrame(
         {
             "component": np.asarray(component_ids),
@@ -65,22 +60,19 @@ def cluster_bootstrap_interval(
         }
     )
     frame["caught"] = frame.positive * frame.alert
-    frame["rows"] = 1.0
-    per_component = frame.groupby("component")[["positive", "alert", "caught", "rows"]].sum()
+    per_component = frame.groupby("component")[["positive", "alert", "caught"]].sum()
     totals = per_component.to_numpy()
     draw = np.random.default_rng(seed).integers(0, len(totals), size=(resamples, len(totals)))
     resampled = totals[draw].sum(axis=1)
-    positives, alert_total, caught, rows = (resampled[:, column] for column in range(4))
+    positives, alert_total, caught = (resampled[:, column] for column in range(3))
 
     with np.errstate(divide="ignore", invalid="ignore"):
         recall = caught / positives
         precision = caught / alert_total
-        lift = precision / (positives / rows)
     full = totals.sum(axis=0)
     estimates = {
         "recall": full[2] / full[0],
         "precision": full[2] / full[1],
-        "lift": (full[2] / full[1]) / (full[0] / full[3]),
     }
     return {
         name: (
@@ -88,7 +80,7 @@ def cluster_bootstrap_interval(
             float(np.nanpercentile(values, 2.5)),
             float(np.nanpercentile(values, 97.5)),
         )
-        for name, values in (("recall", recall), ("precision", precision), ("lift", lift))
+        for name, values in (("recall", recall), ("precision", precision))
     }
 
 
@@ -151,5 +143,4 @@ def ranking_and_probability_metrics(labels, scores) -> dict[str, float]:
     return {
         "pr_auc": float(average_precision_score(labels, scores)),
         "roc_auc": float(roc_auc_score(labels, scores)),
-        "brier": float(brier_score_loss(labels, scores)),
     }

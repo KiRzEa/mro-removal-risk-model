@@ -60,7 +60,6 @@ from src.evaluation import (  # noqa: E402
     budget_needed_for_target,
     cluster_bootstrap_interval,
     fixed_cutoff_policy,
-    lift_at_budget,
     precision_at_budget,
     recall_at_budget,
     recall_vs_alerts_curve,
@@ -79,11 +78,10 @@ def toy():
     return labels, scores, periods
 
 
-def test_recall_precision_and_lift_on_a_toy_period(toy):
+def test_recall_and_precision_on_a_toy_period(toy):
     labels, scores, periods = toy
     assert recall_at_budget(labels, scores, periods, 0.05) == pytest.approx(0.75)
     assert precision_at_budget(labels, scores, periods, 0.05) == pytest.approx(3 / 5)
-    assert lift_at_budget(labels, scores, periods, 0.05) == pytest.approx((3 / 5) / 0.04)
 
 
 def test_cluster_bootstrap_interval_brackets_the_estimate_and_repeats(toy):
